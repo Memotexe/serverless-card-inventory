@@ -1,6 +1,6 @@
 <template>
   <img alt="Catalog Logo" width="100" height="100" src="./assets/Quick_Ball.webp">
-  <Home pageTitle="TCT - Trading Card Tracker"/>
+  <Home pageTitle="TCT - Trading Card Tracker" currentDate="Date"/>
 </template>
 
 <script>
