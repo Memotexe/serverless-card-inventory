@@ -1,15 +1,14 @@
 <template>
-  <img alt="Catalog Logo" width="100" height="100" src="./assets/Quick_Ball.webp">
-  <Home pageTitle="TCT - Trading Card Tracker" currentDate="Date"/>
+  <MainPage />
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import MainPage from './components/MainPage.vue';
 
 export default {
   name: 'App',
   components: {
-    Home
+    MainPage
   }
 }
 </script>
