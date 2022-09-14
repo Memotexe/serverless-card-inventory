@@ -7,9 +7,9 @@
         /></el-icon>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>View</el-dropdown-item>
-            <el-dropdown-item>Add</el-dropdown-item>
-            <el-dropdown-item>Delete</el-dropdown-item>
+            <el-dropdown-item><router-link to="/">View</router-link></el-dropdown-item>
+            <el-dropdown-item><router-link to="/card/add">Add</router-link></el-dropdown-item>
+            <el-dropdown-item><router-link to="/card/delete">Delete</router-link></el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
