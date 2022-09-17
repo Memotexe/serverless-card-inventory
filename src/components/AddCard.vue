@@ -1,8 +1,16 @@
 <template>
-  <div>
-    <Header></Header>
-    <div>TODO style n content</div>
-    <Footer></Footer>
+  <div class="common-layout">
+    <el-container>
+        <el-header>
+            <Header/>
+        </el-header>
+        <el-main>
+            <div>TODO style n content</div>
+        </el-main>
+        <el-footer>
+            <Footer/>
+        </el-footer>
+    </el-container>
   </div>
 </template>
 <script>

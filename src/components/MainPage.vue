@@ -3,7 +3,7 @@
     <el-container>
       <el-header> <Header /> </el-header>
       <el-container>
-        <el-aside width="200px"><Filter /></el-aside>
+        <el-aside><Filter /></el-aside>
         <el-container>
           <el-main><Catalog/></el-main>
           <el-footer><Footer /></el-footer>
@@ -29,4 +29,8 @@ export default {
 }
 }
 </script>
-
+<style scoped>
+.el-aside {
+    width: 200px;
+}
+</style>

@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div>
     <p>
       <Card />
@@ -23,4 +23,3 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
