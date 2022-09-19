@@ -1,6 +1,6 @@
 <template>
   <el-header>
-        <el-row gutter="10"> 
+        <el-row :gutter="10"> 
             <el-col :span="10">
             </el-col>
             <el-col :span="1.4">
