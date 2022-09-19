@@ -4,8 +4,8 @@
         <el-header>
             <Header/>
         </el-header>
-        <el-main>
-            <el-form :model="form">
+        <el-main style="align-self: center; padding-left:0% ;">
+            <el-form  :model="form">
                 <el-form-item label="Card">
                     <el-autocomplete 
                         v-model="form.card"
@@ -14,6 +14,7 @@
                         placeholder="Select a Card"
                         :fetch-suggestions="searchCards"
                     />
+                    <!-- Make hte input of the card's name the same length as the grade -->
                 </el-form-item>
                 <el-form-item label="Grade">
                     <el-select v-model="form.grade" placeholder="please select your grade">
