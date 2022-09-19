@@ -1,17 +1,6 @@
 <template>
-  <MainPage />
+  <router-view></router-view>
 </template>
-
-<script>
-import MainPage from './components/MainPage.vue';
-
-export default {
-  name: 'App',
-  components: {
-    MainPage
-  }
-}
-</script>
 
 <style>
 #app {

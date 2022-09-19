@@ -62,14 +62,30 @@ export default {
             CardList: [
                 {value: "card 1", other: "another field"},
                 {value: "card 2", other: "yet another field"},
-                {value: "card 3", other: "final extra field"}
+                {value: "card 3", other: "final extra field"},
+                {value: "test", other: "test data"},
+                {value: "test2", other: "test data"},
+                {value: "test 3", other: "test data"},
+                {value: "carl", other: "carl Jones"},
             ]
         }
     },
     methods: {
         searchCards(queryString, cb)
         {
-            cb(this.CardList);
+            let cards = this.CardList;
+            if (queryString == "null")
+            {
+                queryString = null;
+            }
+            const results = queryString ? cards.filter(this.cardFilter(queryString)) : cards;
+            cb(results);
+        },
+        cardFilter(queryString)
+        {
+            return (card) => {
+                return (card.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
+            }
         }
     }
 };
