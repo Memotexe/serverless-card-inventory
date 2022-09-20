@@ -87,6 +87,17 @@ export default {
             return (card) => {
                 return (card.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
             }
+        },
+        onSubmit()
+        {
+            console.log('do stuff');
+        },
+        onCancel()
+        {
+            this.form = {
+                card: null,
+                grade: null,
+            };
         }
     }
 };
