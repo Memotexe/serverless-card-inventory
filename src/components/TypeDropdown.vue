@@ -1,34 +1,31 @@
 <template lang="">
   <div>
-    <el-dropdown>
-      <span class="el-dropdown-link">
-        Type<el-icon class="el-icon--right"><arrow-down /></el-icon>
-      </span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>
-          <el-dropdown-item :icon="Plus"> Action 2</el-dropdown-item>
-          <el-dropdown-item :icon="Plus">Action 3</el-dropdown-item>
-          <el-dropdown-item :icon="Plus">Action 4</el-dropdown-item>
-          <el-dropdown-item :icon="Plus">Action 5</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
+    <el-select-v2
+    v-model="value"
+    :options="options"
+    placeholder="Choose Type"
+    size="small"
+    clearable
+  />
   </div>
 </template>
 
-<script  setup>
-import {
-  ArrowDown,
-  Plus,
-} from "@element-plus/icons-vue";
-</script>
-
-<style scoped>
-.block-col-2 .demonstration {
-  display: block;
-  color: var(--el-text-color-secondary);
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-</style>
+<script setup>
+  import { ref } from 'vue'
+  const initials = ['Normal', 'Fire', 'Water', 'Grass', 'Electric',
+   'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
+  'Rock', 'Ghost', 'Dark', 'Dragon', 'Steel', 'Fairy']
+  
+  const value = ref('')
+  const options = Array.from({ length: 18 }).map((_, idx) => ({
+  value: `Option ${idx}`,
+  label: `${initials[idx]}`,
+}))
+  </script>
+  
+  <style scoped>
+  .el-select-v2 {
+    margin-right: 20px;
+    margin-top:1em
+  }
+  </style>

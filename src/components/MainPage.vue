@@ -5,7 +5,7 @@
       <el-container>
         <el-aside><Filter /></el-aside>
         <el-container>
-          <el-main><Catalog/></el-main>
+          <el-main><Catalog /> </el-main>
           <el-footer><Footer /></el-footer>
         </el-container>
       </el-container>
@@ -14,23 +14,23 @@
 </template>
 
 <script>
-import Header from './Header.vue';
-import Filter from './Filters.vue';
-import Catalog from './Catalog.vue';
-import Footer from './Footer.vue';
+import Header from "./Header.vue";
+import Filter from "./Filters.vue";
+import Catalog from "./Catalog.vue";
+import Footer from "./Footer.vue";
 
 export default {
-  name: 'Mainpage',
+  name: "Mainpage",
   components: {
     Header,
     Filter,
     Catalog,
     Footer,
-}
-}
+  },
+};
 </script>
 <style scoped>
 .el-aside {
-    width: 200px;
+  width: 200px;
 }
 </style>

@@ -3,7 +3,6 @@
     <p>
       <Card />
     </p>
-    <p>
       <el-pagination
         small
         background
@@ -11,7 +10,6 @@
         :total="50"
         class="mt-4"
       />
-    </p>
   </div>
 </template>
 <script>
