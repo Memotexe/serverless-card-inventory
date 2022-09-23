@@ -12,10 +12,10 @@
 
 <script setup>
   import { ref } from 'vue'
-  const initials = ['Common', 'Uncommon', 'Rare', 'Promo']
+  const initials = ['Common', 'Uncommon', 'Rare', 'Ultra Rare', 'Promo',]
   
   const value = ref('')
-  const options = Array.from({ length: 4 }).map((_, idx) => ({
+  const options = Array.from({ length: 5 }).map((_, idx) => ({
   value: `Option ${idx}`,
   label: `${initials[idx]}`,
 }))
