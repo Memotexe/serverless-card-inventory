@@ -4,9 +4,7 @@
       <el-icon><setting /></el-icon>
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item>dropdown item 1</el-dropdown-item>
-          <el-dropdown-item>dropdown item 2</el-dropdown-item>
-          <el-dropdown-item>dropdown item 3</el-dropdown-item>
+          <el-dropdown-item>Logout</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
