@@ -6,6 +6,7 @@
     placeholder="Choose Type"
     size="small"
     clearable
+    style="margin-bottom: 14em"
   />
   </div>
 </template>
