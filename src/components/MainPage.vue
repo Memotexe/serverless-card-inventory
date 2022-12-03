@@ -6,7 +6,6 @@
         <el-aside><Filter /></el-aside>
         <el-container>
           <el-main><Catalog /> </el-main>
-          <el-footer><Footer /></el-footer>
         </el-container>
       </el-container>
     </el-container>
@@ -17,7 +16,6 @@
 import Header from "./Header.vue";
 import Filter from "./Filters.vue";
 import Catalog from "./Catalog.vue";
-import Footer from "./Footer.vue";
 
 export default {
   name: "Mainpage",
@@ -25,7 +23,7 @@ export default {
     Header,
     Filter,
     Catalog,
-    Footer,
+
   },
 };
 </script>

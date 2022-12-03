@@ -1,15 +1,4 @@
 <template>
-  <div class="user-menu">
-    <el-dropdown>
-      <el-icon><setting /></el-icon>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item @click="signOut">Logout</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
-    <span>User</span>
-  </div>
   <el-header>
     <el-row :gutter="10">
       <el-col :span="10"> </el-col>
@@ -34,7 +23,6 @@
 </template>
 
 <script setup>
-import { Menu as Setting } from "@element-plus/icons-vue";
 </script>
 <style scoped>
 .user-menu {
