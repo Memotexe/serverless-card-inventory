@@ -1,32 +1,45 @@
 <template lang="">
   <div>
     <el-select-v2
-    v-model="value"
-    :options="options"
-    placeholder="Choose Type"
-    size="small"
-    clearable
-    style="margin-bottom: 14em"
-  />
+      v-model="value"
+      :options="options"
+      placeholder="Choose Type"
+      size="small"
+      clearable
+      :change="typeSorting()"
+    />
   </div>
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-  const initials = ['Normal', 'Fire', 'Water', 'Grass', 'Electric',
-   'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
-  'Rock', 'Ghost', 'Dark', 'Dragon', 'Steel', 'Fairy']
-  
-  const value = ref('')
-  const options = Array.from({ length: 18 }).map((_, idx) => ({
-  value: `Option ${idx}`,
+import { ref, defineEmits } from "vue";
+const emit = defineEmits(['change'])
+const initials = [
+  "Fire",
+  "Water",
+  "Grass",
+  "Lightning",
+  "Fighting",
+  "Colorless",
+  "Psychic",
+  "Bug",
+  "Trainer",
+];
+
+const value = ref("");
+const options = Array.from({ length: 9 }).map((_, idx) => ({
+  value: idx,
   label: `${initials[idx]}`,
-}))
-  </script>
-  
-  <style scoped>
-  .el-select-v2 {
-    margin-right: 20px;
-    margin-top:1em
+}));
+
+
+function typeSorting(){
+  if(value.value === ""){
+    return value;
   }
-  </style>
+  let type = options[value.value].label;
+  emit('change',type);
+}
+</script>
+
+<style scoped></style>

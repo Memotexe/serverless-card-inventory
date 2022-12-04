@@ -3,7 +3,6 @@
     <el-container>
       <el-header> <Header /> </el-header>
       <el-container>
-        <el-aside><Filter /></el-aside>
         <el-container>
           <el-main><Catalog /> </el-main>
         </el-container>
@@ -14,16 +13,13 @@
 
 <script>
 import Header from "./Header.vue";
-import Filter from "./Filters.vue";
 import Catalog from "./Catalog.vue";
 
 export default {
   name: "Mainpage",
   components: {
     Header,
-    Filter,
     Catalog,
-
   },
 };
 </script>
